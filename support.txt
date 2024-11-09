@@ -1,0 +1,4 @@
+1. we are going to use html , css , js , tailwind & more animation library
+2. use clean code
+3. use best practices
+
