@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body>
+
+    <header class="bg-[#070707]  -mt-3 mb-28 text-white w-full z-40 fixed border-white border-b-[1px] shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+          <!-- Logo -->
+          <div class="text-2xl font-bold">
+            <a href="#" class="text-[#8f8181]">Logo</a>
+          </div>
+    
+          <!-- Nav Links (Hidden on Mobile, Visible on Desktop) -->
+          <nav class="hidden md:flex space-x-8">
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Home</a>
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Services</a>
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Projects</a>
+          </nav>
+    
+          <!-- Contact Button -->
+          <a href="#"
+            class="hidden md:inline-block bg-[#4B43E1] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+            Contact Us
+          </a>
+    
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+    
+        <!-- Mobile Nav Menu (Hidden by Default) -->
+        <nav id="mobile-menu" class="hidden pb-2 md:hidden bg-[#1a1a1a]">
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
+          <a href="#"
+            class="block  px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
+        </nav>
+      </header>
+
+      <div class="h-12 bg-black">
+      </div>
+
+
+    <section class="bg-[#070707] py-16 px-6 md:px-10">
+        <div class="max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Project Card 1 -->
+            <div class="rounded-lg bg-neutral-800 p-6 shadow-md text-center">
+                <div class="flex justify-center">
+                    <div class="avatar">
+                        <div class="mask mask-squircle w-56">
+                          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=1000" />
+                        </div>
+                      </div>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-100">Dream Hope Development</h3>
+                <p class="mt-2 text-gray-400">Top NGO in Katni: We build and maintain DHD Foundation's website.</p>
+                <button   class="mt-6 flex items-center justify-center w-full rounded-md bg-[#9333EA] hover:bg-[#7b2ad8] text-white py-2 font-medium">
+                    <span><a target="_blank" href="https://www.dreamhopedevelopment.org/">Visit Website</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2l6 6-6 6" />
+                        <path d="M20 8h-7a4 4 0 0 0-4 4v8" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Project Card 2 -->
+            <div class="rounded-lg bg-neutral-800 p-6 shadow-md text-center">
+                <div class="flex justify-center">
+                    <div class="avatar">
+                        <div class="mask mask-squircle w-56">
+                          <img src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                        </div>
+                      </div>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-100">PM Logistics</h3>
+                <p class="mt-2 text-gray-400">"Leading transport company in MP: We handle SEO & web development."</p>
+                <button class="mt-6 flex items-center justify-center w-full rounded-md bg-[#9333EA] hover:bg-[#7b2ad8] text-white py-2 font-medium">
+                    <span><a target="_blank" href="https://www.pmlogistics.site/">Visit Website</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2l6 6-6 6" />
+                        <path d="M20 8h-7a4 4 0 0 0-4 4v8" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Project Card 3 -->
+            <div class="rounded-lg bg-neutral-800 p-6 shadow-md text-center">
+                <div class="flex justify-center">
+                    <div class="avatar">
+                        <div class="mask mask-squircle w-56">
+                          <img src="https://images.pexels.com/photos/23325939/pexels-photo-23325939/free-photo-of-home-office.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                        </div>
+                      </div>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-100">Dream Property Katni</h3>
+                <p class="mt-2 text-gray-400">Dream Property Katni: SEO optimization and full web maintenance services.</p>
+                <button class="mt-6 flex items-center justify-center w-full rounded-md bg-[#9333EA] hover:bg-[#7b2ad8] text-white py-2 font-medium">
+                    <span><a target="_blank" href="https://www.dreampropertykatni.in/">Visit Website</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2l6 6-6 6" />
+                        <path d="M20 8h-7a4 4 0 0 0-4 4v8" />
+                    </svg>
+                </button>
+            </div>
+            <div class="rounded-lg bg-neutral-800 p-6 shadow-md text-center">
+                <div class="flex justify-center">
+                    <div class="avatar">
+                        <div class="mask mask-squircle w-56">
+                          <img src="https://images.pexels.com/photos/6193659/pexels-photo-6193659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                        </div>
+                      </div>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-100">Galibazz.live</h3>
+                <p class="mt-2 text-gray-400">Managing SEO and backend of Galibazz.live for open youth expression.</p>
+                <button class="mt-6 flex items-center justify-center w-full rounded-md bg-[#9333EA] hover:bg-[#7b2ad8] text-white py-2 font-medium">
+                    <span><a target="_blank" href="https://www.galibazz.live/">Visit Website</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2l6 6-6 6" />
+                        <path d="M20 8h-7a4 4 0 0 0-4 4v8" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Project Card 2 -->
+            <div class="rounded-lg bg-neutral-800 p-6 shadow-md text-center">
+                <div class="flex justify-center">
+                    <div class="avatar">
+                        <div class="mask mask-squircle w-56">
+                          <img src="https://images.pexels.com/photos/5554701/pexels-photo-5554701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                        </div>
+                      </div>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-100">DHD Social Media</h3>
+                <p class="mt-2 text-gray-400">We delivered top-quality DHD social media banners and video editing.</p>
+                <button class="mt-6 flex items-center justify-center w-full rounded-md bg-[#9333EA] hover:bg-[#7b2ad8] text-white py-2 font-medium">
+                    <span><a target="_blank" href="https://www.google.com/search?q=dream+hope+development&sca_esv=8c3b9fce3b8221a7&rlz=1C1CHZN_enIN1080IN1080&sxsrf=ADLYWIIQHrNCzIJjcHAcrNiL5jOKVmH-lQ%3A1731258437232&ei=RegwZ_PyDdiA1e8P_omKIA&oq=dream+hope++&gs_lp=Egxnd3Mtd2l6LXNlcnAiDGRyZWFtIGhvcGUgICoCCAAyBBAjGCcyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyCxAuGIAEGMcBGK8BMgUQABiABDIEEAAYHkj8wAFQnQRYhLoBcAR4AJABAJgBmAKgAfYtqgEGMC4yNy43uAEDyAEA-AEBmAIboAKcIMICCxAAGIAEGLADGKIEwgIIEAAYgAQYogTCAgoQIxiABBgnGIoFwgILEAAYgAQYkQIYigXCAgoQABiABBgUGIcCwgIREC4YgAQYkQIYxwEYigUYrwHCAgsQLhiABBiRAhiKBcICCBAAGIAEGLEDwgILEC4YgAQY0QMYxwHCAggQLhiABBixA8ICFxAuGIAEGJECGMcBGJgFGIoFGJoFGK8BwgIHEAAYgAQYCsICDRAuGIAEGMcBGAoYrwHCAgcQABiABBgNwgIGEAAYFhgewgIIEAAYBxgKGB7CAgYQABgNGB7CAgYQABgHGB7CAgwQLhjRAxgHGMcBGB7CAggQABgHGB4YD5gDAIgGAZAGBJIHBjQuMTcuNqAH8PMC&sclient=gws-wiz-serp">Visit Website</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2l6 6-6 6" />
+                        <path d="M20 8h-7a4 4 0 0 0-4 4v8" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Project Card 3 -->
+            <div class="rounded-lg bg-neutral-800 p-6 shadow-md text-center">
+                <div class="flex justify-center">
+                    <div class="avatar">
+                        <div class="mask mask-squircle w-56">
+                          <img src="https://images.pexels.com/photos/20555791/pexels-photo-20555791/free-photo-of-multiple-displays-mockup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                        </div>
+                      </div>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-100">Jokes Blog</h3>
+                <p class="mt-2 text-gray-400">We are handling the best joke blog website, galibazz.social.</p>
+                <button class="mt-6 flex items-center justify-center w-full rounded-md bg-[#9333EA] hover:bg-[#7b2ad8] text-white py-2 font-medium">
+                    <span><a target="_blank" href="https://www.galibazz.social/">Visit Website</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2l6 6-6 6" />
+                        <path d="M20 8h-7a4 4 0 0 0-4 4v8" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+      </script>  
+    
+</body>
+</html>
