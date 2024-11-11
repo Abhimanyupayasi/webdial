@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webdail</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+
+        .book-table {
+            background: #C8A97E;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .book-table:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .content-section {
+            padding: 6rem 4rem;
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .content-image {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .content-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .content-text {
+            flex: 1;
+        }
+
+        .content-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .content-text p {
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .view-more {
+            color: #C8A97E;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .view-more:hover {
+            gap: 1rem;
+        }
+
+        .video-section {
+            height: 80vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        footer {
+            background: #000;
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #C8A97E;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #C8A97E;
+        }
+    </style>
+</head>
+<body>
+ 
+
+    <header class="bg-[#070707] border-white border-b-[1px] shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+          <!-- Logo -->
+          <div class="text-2xl font-bold">
+            <a href="#" class="text-[#EAEAEA]">Webdail</a>
+          </div>
+    
+          <!-- Nav Links (Hidden on Mobile, Visible on Desktop) -->
+          <nav class="hidden md:flex space-x-8">
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Home</a>
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Services</a>
+            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Projects</a>
+          </nav>
+    
+          <!-- Contact Button -->
+          <a href="#"
+            class="hidden md:inline-block bg-[#4B43E1] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+            Contact Us
+          </a>
+    
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+    
+        <!-- Mobile Nav Menu (Hidden by Default) -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-[#1a1a1a]">
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
+          <a href="#"
+            class="block px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
+        </nav>
+      </header>
+
+    <section class="hero">
+        <h1>About</h1>
+    </section>
+
+    <section class="content-section">
+        <div class="content-image">
+            <img src="/api/placeholder/800/600" alt="Stroy">
+        </div>
+        <div class="content-text">
+            <h2>Behind the scene<br>Our story</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <img src="/api/placeholder/1920/1080" alt="Video">
+        <div class="play-button">
+            <i class="fas fa-play" style="color: #fff; font-size: 1.5rem;"></i>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Bridge</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Pages</h3>
+            <p><a href="#">Home</a></p>
+            <p><a href="#">Email</a></p>
+            <p><a href="#">Location</a></p>
+            <p><a href="#">Contact</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>Opening hours</h3>
+            <p>Monday - Friday<br>10:00am - 11:00pm</p>
+            <p>Saturday - Sunday<br>10:00am - 03:00am</p>
+        </div>
+        <div class="footer-section">
+            <h3>Instagram</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+
+        // Play button animation
+        const playButton = document.querySelector('.play-button');
+        playButton.addEventListener('click', function() {
+            this.style.transform = 'translate(-50%, -50%) scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 200);
+        });
+
+        // Scroll reveal animation
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.content-text h2, .content-text p');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight * 0.8) {
+                    element.style.animation = 'fadeUp 1s ease forwards';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
