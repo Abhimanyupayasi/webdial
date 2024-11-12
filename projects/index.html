@@ -5,51 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <header class="bg-[#070707]  -mt-3 mb-28 text-white w-full z-40 fixed border-white border-b-[1px] shadow-md">
-        <div class="container mx-auto flex justify-between items-center p-4">
-          <!-- Logo -->
-          <div class="text-2xl font-bold">
-            <a href="#" class="text-[#8f8181]">Logo</a>
-          </div>
-    
-          <!-- Nav Links (Hidden on Mobile, Visible on Desktop) -->
-          <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Home</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">About Us</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Services</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Projects</a>
-          </nav>
-    
-          <!-- Contact Button -->
-          <a href="#"
-            class="hidden md:inline-block bg-[#4B43E1] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
-            Contact Us
-          </a>
-    
-          <!-- Mobile Menu Button -->
-          <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
+  <header class="bg-[#070707]  lg:-mt-3 mb-28 text-white w-full z-40 fixed border-white border-b-[1px] shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-2">
+      <!-- Logo -->
+      <div class="text-lg font-bold">
+        <a href="../">
+        <div  class="flex items-center space-x-2 text-white text-3xl xl:text-4xl font-extrabold" style="background-color: #070707; padding: 10px;">
+          <!-- Globe Icon (Global symbol) -->
+          <!-- <img width="50"  height="50" src="../imgs/icons8-globe-50.png" alt="globe--v1"/> -->
+          <span class=""><i class="fa-solid fa-earth-africa"></i></span>
+        
+          <!-- Logo Text -->
+          <span class="text-white">Dial</span>
         </div>
-    
-        <!-- Mobile Nav Menu (Hidden by Default) -->
-        <nav id="mobile-menu" class="hidden pb-2 md:hidden bg-[#1a1a1a]">
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
-          <a href="#"
-            class="block  px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
-        </nav>
-      </header>
-
-      <div class="h-12 bg-black">
+      </a>
       </div>
+
+      <!-- Nav Links (Hidden on Mobile, Visible on Desktop) -->
+      <nav class="hidden font-semibold font-mon text-gray-100 md:flex uppercase space-x-8">
+        <a href="../" class=" hover:text-[#4B43E1]">Home</a>
+        <a href="../about-us/" class=" hover:text-[#4B43E1]">About Us</a>
+        <a href="../services/" class=" hover:text-[#4B43E1]">Services</a>
+        <a href="../projects/" class=" hover:text-[#4B43E1]">Projects</a>
+      </nav>
+
+      <!-- Contact Button -->
+      <a href="../contact-us/"
+        class="hidden md:inline-block bg-[#4B43E1] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+        Contact Us
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Menu (Hidden by Default) -->
+    <nav id="mobile-menu" class="hidden pb-2 md:hidden bg-[#070707]">
+        <a href="../" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
+        <a href="../about-us/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
+        <a href="../services/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
+        <a href="../projects/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
+        <a href="../contact-us/"
+          class="block  px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
+      </nav>
+  </header>
+
+  <div class="h-12 bg-black">
+  </div>
 
 
     <section class="bg-[#070707] py-16 px-6 md:px-10">
@@ -174,7 +184,26 @@
         </div>
     </section>
 
-
+    <footer class=" mx-auto w-full relative text-center bg-[#070707] text-white">
+      <div class="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
+          <h2 class="font-bold text-3xl xl:text-4xl leading-snug">
+            Ready to grow with WebDial?<br>Be online today.
+          </h2>
+          <a class="mt-8 xl:mt-12 px-12 py-5 text-lg font-medium leading-tight inline-block bg-blue-800 rounded-full shadow-xl border border-transparent hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-sky-999 focus:ring-sky-500"
+              href="../contact-us/">Get
+              started</a>
+          <div class="mt-14 xl:mt-20">
+              <nav class="flex flex-wrap justify-center text-lg font-medium">
+                  <div class="px-5 py-2"><a href="../contact-us/">Contact</a></div>
+                  <div class="px-5 py-2"><a href="../pricing/">Pricing</a></div>
+                  <div class="px-5 py-2"><a href="../our-team/">Our Team</a></div>
+                  <div class="px-5 py-2"><a href="../projects/">Projects</a></div>
+                  <div class="px-5 py-2"><a href="../services/">Services</a></div>
+              </nav>
+              <p class="mt-7 text-base">© 2024 WebDial</p>
+          </div>
+      </div>
+  </footer> 
     <script>
         document.getElementById('menu-btn').addEventListener('click', function () {
           document.getElementById('mobile-menu').classList.toggle('hidden');

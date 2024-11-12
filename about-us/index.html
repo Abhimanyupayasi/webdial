@@ -3,238 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webdail</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../src/output.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.7;
-        }
-
-        .book-table {
-            background: #C8A97E;
-            color: #000;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: transform 0.3s ease;
-        }
-
-        .book-table:hover {
-            transform: translateY(-2px);
-        }
-
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards;
-        }
-
-        .content-section {
-            padding: 6rem 4rem;
-            display: flex;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .content-image {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .content-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .content-text {
-            flex: 1;
-        }
-
-        .content-text h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards;
-        }
-
-        .content-text p {
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-        }
-
-        .view-more {
-            color: #C8A97E;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s ease;
-        }
-
-        .view-more:hover {
-            gap: 1rem;
-        }
-
-        .video-section {
-            height: 80vh;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-section video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .play-button:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        footer {
-            background: #000;
-            padding: 4rem;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #C8A97E;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p, .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            line-height: 1.6;
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            color: #fff;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #C8A97E;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
- 
 
-    <header class="bg-[#070707] border-white border-b-[1px] shadow-md">
-        <div class="container mx-auto flex justify-between items-center p-4">
+    <header class="bg-[#1F2937] lg:-mt-3 border-b-[1px] border-b-[#3C4D67]  mb-28 text-white w-full z-40 fixed  ">
+        <div class="container mx-auto flex justify-between items-center p-2">
           <!-- Logo -->
-          <div class="text-2xl font-bold">
-            <a href="#" class="text-[#EAEAEA]">Webdail</a>
+          <div class="text-lg font-bold">
+            <a href="../">
+            <div  class="flex items-center space-x-2 text-white text-3xl xl:text-4xl font-extrabold" style="background-color: #1F2937; padding: 10px;">
+              <!-- Globe Icon (Global symbol) -->
+              <!-- <img width="50"  height="50" src="../imgs/icons8-globe-50.png" alt="globe--v1"/> -->
+              <span class=""><i class="fa-solid fa-earth-africa"></i></span>
+            
+              <!-- Logo Text -->
+              <span class="text-white">Dial</span>
+            </div>
+          </a>
           </div>
-    
+        
           <!-- Nav Links (Hidden on Mobile, Visible on Desktop) -->
-          <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Home</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">About Us</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Services</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Projects</a>
+          <nav class="hidden font-semibold font-mon text-gray-100 md:flex uppercase space-x-8">
+            <a href="../" class=" hover:text-[#4B43E1]">Home</a>
+            <a href="../about-us/" class=" hover:text-[#4B43E1]">About Us</a>
+            <a href="../services/" class=" hover:text-[#4B43E1]">Services</a>
+            <a href="../projects/" class=" hover:text-[#4B43E1]">Projects</a>
           </nav>
     
           <!-- Contact Button -->
-          <a href="#"
+          <a href="../contact-us/"
             class="hidden md:inline-block bg-[#4B43E1] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
             Contact Us
           </a>
@@ -248,96 +50,123 @@
         </div>
     
         <!-- Mobile Nav Menu (Hidden by Default) -->
-        <nav id="mobile-menu" class="hidden md:hidden bg-[#1a1a1a]">
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
-          <a href="#"
-            class="block px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
+        <nav id="mobile-menu" class="hidden pb-2 md:hidden bg-[#1F2937]">
+          <a href="../" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
+          <a href="../about-us/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
+          <a href="../services/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
+          <a href="../projects/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
+          <a href="../contact-us/"
+            class="block  px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
         </nav>
       </header>
 
-    <section class="hero">
-        <h1>About</h1>
-    </section>
+      <div class="h-12 bg-black">
+      </div>
 
-    <section class="content-section">
-        <div class="content-image">
-            <img src="/api/placeholder/800/600" alt="Stroy">
-        </div>
-        <div class="content-text">
-            <h2>Behind the scene<br>Our story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
 
-    <section class="video-section">
-        <img src="/api/placeholder/1920/1080" alt="Video">
-        <div class="play-button">
-            <i class="fas fa-play" style="color: #fff; font-size: 1.5rem;"></i>
-        </div>
-    </section>
 
-    <footer>
-        <div class="footer-section">
-            <h3>Bridge</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor.</p>
+
+    <!-- source https://github.com/themesberg/landwind -->
+
+
+
+<div class="bg-black py-32">
+    <div class="flex flex-col justify-center items-center">
+      <div class="flex items-center justify-center rounded-full border border-zinc-600 px-2 py-[6px]">
+        <div class="w-5 h-5 bg-zinc-900 rounded-full text-zinc-400 mr-2 p-[4px]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path d="M19 32c-7.732 0-14-6.268-14-14S11.268 4 19 4s14 6.268 14 14"></path><path d="M44 18H18v26h26z"></path></g></svg>
+          </div>
+          <div class="text-zinc-400 text-sm">
+            Why choose WebDial?
+          </div>
         </div>
-        <div class="footer-section">
-            <h3>Pages</h3>
-            <p><a href="#">Home</a></p>
-            <p><a href="#">Email</a></p>
-            <p><a href="#">Location</a></p>
-            <p><a href="#">Contact</a></p>
+        <div class="relative text-center mt-5 mb-12 text-5xl font-medium">
+          <h1 class="relative text-white pb-3 leading-[65px] z-10 isolate">We Create The Best Customer<br>Experience For You</h1> 
+            <div class="absolute left-1/2 bottom-12 -translate-x-1/2 h-12 w-96 bg-blue-800 blur-[50px] z-[1] opacity-60">
+            </div>
+          </div>
         </div>
-        <div class="footer-section">
-            <h3>Opening hours</h3>
-            <p>Monday - Friday<br>10:00am - 11:00pm</p>
-            <p>Saturday - Sunday<br>10:00am - 03:00am</p>
+    </div>
+
+    <div class="container overflow-hidden bg-black mx-auto py-12 px-6">
+        <!-- <h1 class="text-4xl font-extrabold text-center mb-12 text-gray-100 drop-shadow-lg">
+          Why Choose WebDial?
+        </h1> -->
+        <h1 class="mb-10 pb-5 text-3xl text-center font-extrabold text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Why Choose</span> WebDial</h1>
+      
+        <!-- Reason 1 -->
+        <div class="reason opacity-0 translate-x-10 mb-8 p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl border border-gray-700 transition-all duration-300">
+          <h2 class="text-3xl font-bold text-gray-200 mb-3">One Team for All Your Needs</h2>
+          <p class="text-gray-400">With WebDial, you have a one-stop solution for web development, app development, video editing, photo editing, SEO, ads, graphic design, and more. Every service you need is here under one roof.</p>
         </div>
-        <div class="footer-section">
-            <h3>Instagram</h3>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+      
+        <!-- Reason 2 -->
+        <div class="reason opacity-0 translate-x-10 mb-8 p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl border border-gray-700 transition-all duration-300">
+          <h2 class="text-3xl font-bold text-gray-200 mb-3">Complete Solutions Tailored to You</h2>
+          <p class="text-gray-400">From launching your website to managing brand visuals, WebDial covers every aspect with expertise and attention to detail, all tailored to fit your vision.</p>
+        </div>
+      
+        <!-- Reason 3 -->
+        <div class="reason opacity-0 translate-x-10 mb-8 p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl border border-gray-700 transition-all duration-300">
+          <h2 class="text-3xl font-bold text-gray-200 mb-3">Flexible and Budget-Friendly</h2>
+          <p class="text-gray-400">We work with budgets of all sizes, providing high-quality solutions without breaking the bank. WebDial is here to meet your needs affordably and effectively.</p>
+        </div>
+      
+        <!-- Reason 4 -->
+        <div class="reason opacity-0 translate-x-10 mb-8 p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl border border-gray-700 transition-all duration-300">
+          <h2 class="text-3xl font-bold text-gray-200 mb-3">Expert Team with Diverse Skills</h2>
+          <p class="text-gray-400">With experienced professionals in web design, marketing, video production, and more, WebDial brings the expertise you need to elevate your business.</p>
+        </div>
+      </div>
+      
+
+
+      <footer class=" mx-auto w-full relative text-center bg-[#1F2937] text-white">
+        <div class="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
+            <h2 class="font-bold text-3xl xl:text-4xl leading-snug">
+              Ready to grow with WebDial?<br>Be online today.
+            </h2>
+            <a class="mt-8 xl:mt-12 px-12 py-5 text-lg font-medium leading-tight inline-block bg-blue-800 rounded-full shadow-xl border border-transparent hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-sky-999 focus:ring-sky-500"
+                href="../contact-us/">Get
+                started</a>
+            <div class="mt-14 xl:mt-20">
+                <nav class="flex flex-wrap justify-center text-lg font-medium">
+                    <div class="px-5 py-2"><a href="../contact-us/">Contact</a></div>
+                    <div class="px-5 py-2"><a href="../pricing/">Pricing</a></div>
+                    <div class="px-5 py-2"><a href="../our-team/">Our Team</a></div>
+                    <div class="px-5 py-2"><a href="../projects/">Projects</a></div>
+                    <div class="px-5 py-2"><a href="../services/">Services</a></div>
+                </nav>
+                <p class="mt-7 text-base">© 2024 WebDial</p>
             </div>
         </div>
-    </footer>
+    </footer>      
 
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(0, 0, 0, 0.9)';
-            } else {
-                navbar.style.background = 'rgba(0, 0, 0, 0.8)';
-            }
-        });
+         gsap.registerPlugin(ScrollTrigger);
 
-        // Play button animation
-        const playButton = document.querySelector('.play-button');
-        playButton.addEventListener('click', function() {
-            this.style.transform = 'translate(-50%, -50%) scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'translate(-50%, -50%) scale(1)';
-            }, 200);
+// Select all reason elements
+gsap.utils.toArray('.reason').forEach((element, index) => {
+  gsap.fromTo(element, 
+    { opacity: 0, x: 50 },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 0.1,
+      delay: index * 0.3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: element,
+        start: "top 85%",
+        end: "top 30%",
+        toggleActions: "play none none reverse",
+      }
+    }
+  );
+});
+        document.getElementById('menu-btn').addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-
-        // Scroll reveal animation
-        window.addEventListener('scroll', function() {
-            const elements = document.querySelectorAll('.content-text h2, .content-text p');
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (elementTop < windowHeight * 0.8) {
-                    element.style.animation = 'fadeUp 1s ease forwards';
-                }
-            });
-        });
-    </script>
+      </script>
 </body>
 </html>

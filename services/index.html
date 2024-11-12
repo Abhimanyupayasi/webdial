@@ -5,26 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body >
 
-    <header class="bg-[#070707]  -mt-3 mb-28 text-white w-full z-40 fixed border-white border-b-[1px] shadow-md">
-        <div class="container mx-auto flex justify-between items-center p-4">
+    <header class="bg-[#070707]  lg:-mt-3 mb-28 text-white w-full z-40 fixed border-white border-b-[1px] shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-2">
           <!-- Logo -->
-          <div class="text-2xl font-bold">
-            <a href="#" class="text-[#8f8181]">Logo</a>
+          <div class="text-lg font-bold">
+            <a href="../">
+            <div  class="flex items-center space-x-2 text-white text-3xl xl:text-4xl font-extrabold" style="background-color: #070707; padding: 10px;">
+              <!-- Globe Icon (Global symbol) -->
+              <!-- <img width="50"  height="50" src="../imgs/icons8-globe-50.png" alt="globe--v1"/> -->
+              <span class=""><i class="fa-solid fa-earth-africa"></i></span>
+            
+              <!-- Logo Text -->
+              <span class="text-white">Dial</span>
+            </div>
+          </a>
           </div>
     
           <!-- Nav Links (Hidden on Mobile, Visible on Desktop) -->
-          <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Home</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">About Us</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Services</a>
-            <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Projects</a>
+          <nav class="hidden font-semibold font-mon text-gray-100 md:flex uppercase space-x-8">
+            <a href="../" class=" hover:text-[#4B43E1]">Home</a>
+            <a href="../about-us/" class=" hover:text-[#4B43E1]">About Us</a>
+            <a href="../services/" class=" hover:text-[#4B43E1]">Services</a>
+            <a href="../projects/" class=" hover:text-[#4B43E1]">Projects</a>
           </nav>
     
           <!-- Contact Button -->
-          <a href="#"
+          <a href="../contact-us/"
             class="hidden md:inline-block bg-[#4B43E1] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
             Contact Us
           </a>
@@ -38,14 +48,14 @@
         </div>
     
         <!-- Mobile Nav Menu (Hidden by Default) -->
-        <nav id="mobile-menu" class="hidden pb-2 md:hidden bg-[#1a1a1a]">
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
-          <a href="#"
-            class="block  px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
-        </nav>
+        <nav id="mobile-menu" class="hidden pb-2 md:hidden bg-[#070707]">
+            <a href="../" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="../about-us/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About Us</a>
+            <a href="../services/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Services</a>
+            <a href="../projects/" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Projects</a>
+            <a href="../contact-us/"
+              class="block  px-4 py-2 mt-2 text-center text-white bg-[#4B43E1] rounded-md mx-4 hover:bg-blue-700 transition duration-300">Contact Us</a>
+          </nav>
       </header>
 
       <div class="h-12 bg-black">
@@ -59,15 +69,15 @@
     
     
             <div class="relative mx-auto max-w-5xl text-center">
-                <span class="text-gray-400 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
+                <span class="text-gray-200 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
                     How we change the game
                 </span>
                 <h2
-                    class="block w-full bg-gradient-to-b pb-1 from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+                    class="block w-full bg-gradient-to-b pb-1 from-white to-gray-200 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
                     Building websites that your customers love
                 </h2>
                 <p
-                    class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-400">
+                    class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-300">
                     Our team builds websites that engage your customers and drive results. We focus on optimizing every aspect, including SEO, to ensure your business stands out online.
                 </p>
             </div>
@@ -87,8 +97,8 @@
                             <line x1="17" y1="17" x2="17" y2="17.01"></line>
                         </svg>
                     </div>
-                    <h3 class="mt-6 text-gray-400">SEO Featured</h3>
-                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">We build the best SEO strategies to ensure your website ranks higher on search engines.
+                    <h3 class="mt-6 text-gray-200">SEO Featured</h3>
+                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-300">We build the best SEO strategies to ensure your website ranks higher on search engines.
                     </p>
                 </div>
     
@@ -103,8 +113,8 @@
                             <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"></polyline>
                         </svg>
                     </div>
-                    <h3 class="mt-6 text-gray-400">Fast Performance</h3>
-                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">We deliver fast-performing websites that load quickly, providing a seamless experience for your users
+                    <h3 class="mt-6 text-gray-200">Fast Performance</h3>
+                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-300">We deliver fast-performing websites that load quickly, providing a seamless experience for your users
                     </p>
                 </div>
     
@@ -124,8 +134,8 @@
                             <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
                         </svg>
                     </div>
-                    <h3 class="mt-6 text-gray-400">Full Integration</h3>
-                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
+                    <h3 class="mt-6 text-gray-200">Full Integration</h3>
+                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-300">
                         We provide full integration with social media and your links, enhancing connectivity and engagement.
                     </p>
                 </div>
@@ -146,8 +156,8 @@
                         style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
                         <img class="h-3/4 w-3/4" src="https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/external-ssl-ui-and-ux-xnimrodx-lineal-gradient-xnimrodx.png" alt="external-ssl-ui-and-ux-xnimrodx-lineal-gradient-xnimrodx"/>
                     </div>
-                    <h3 class="mt-6 text-gray-400">SSL Certificate</h3>
-                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">We ensure your website’s security with SSL certificates, protecting data and building trust with users.
+                    <h3 class="mt-6 text-gray-200">SSL Certificate</h3>
+                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-300">We ensure your website’s security with SSL certificates, protecting data and building trust with users.
                     </p>
                 </div>
     
@@ -157,8 +167,8 @@
                         style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
                         <img class="h-3/4 w-3/4"  src="https://img.icons8.com/ios-filled/50/iphone-x.png" alt="iphone-x"/>
                     </div>
-                    <h3 class="mt-6 text-gray-400">Mobile Friendly</h3>
-                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">Our websites are fully mobile-friendly and responsive, ensuring a seamless experience across all devices.
+                    <h3 class="mt-6 text-gray-200">Mobile Friendly</h3>
+                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-300">Our websites are fully mobile-friendly and responsive, ensuring a seamless experience across all devices.
                     </p>
                 </div>
     
@@ -168,8 +178,8 @@
                         style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
                         <img class="h-3/4 w-3/4" src="https://img.icons8.com/ios/50/new-post--v1.png" alt="new-post--v1"/>
                     </div>
-                    <h3 class="mt-6 text-gray-400">Business Email</h3>
-                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
+                    <h3 class="mt-6 text-gray-200">Business Email</h3>
+                    <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-300">
                         "We offer professional business email setup, ensuring reliable communication and enhancing your brand's credibility."
                     </p>
                 </div>
@@ -198,9 +208,11 @@
     </div>
     <div class="h-screen bg-black">
 
-        <h2 class="block text-center py-10  w-full bg-gradient-to-b pb-1 from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+        <!-- <h2 class="block text-center py-10  w-full bg-gradient-to-b pb-1 from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
             Our Comprehensive Services Include
-            </h2>
+            </h2> -->
+
+            <h1  class=" text-center pt-10 px-5 -pb-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Our Comprehensive <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">Services Include</span></h1>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-black p-10 pt-28">
     
@@ -270,6 +282,26 @@
         </div>
     </div>
 
+    <footer class=" mx-auto w-full relative text-center bg-[#070707] text-white">
+        <div class="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
+            <h2 class="font-bold text-3xl xl:text-4xl leading-snug">
+              Ready to grow with WebDial?<br>Be online today.
+            </h2>
+            <a class="mt-8 xl:mt-12 px-12 py-5 text-lg font-medium leading-tight inline-block bg-blue-800 rounded-full shadow-xl border border-transparent hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-sky-999 focus:ring-sky-500"
+                href="../contact-us/">Get
+                started</a>
+            <div class="mt-14 xl:mt-20">
+                <nav class="flex flex-wrap justify-center text-lg font-medium">
+                    <div class="px-5 py-2"><a href="../contact-us/">Contact</a></div>
+                    <div class="px-5 py-2"><a href="../pricing/">Pricing</a></div>
+                    <div class="px-5 py-2"><a href="../our-team/">Our Team</a></div>
+                    <div class="px-5 py-2"><a href="../projects/">Projects</a></div>
+                    <div class="px-5 py-2"><a href="../services/">Services</a></div>
+                </nav>
+                <p class="mt-7 text-base">© 2024 WebDial</p>
+            </div>
+        </div>
+    </footer> 
 
 
       <script>
