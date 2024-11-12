@@ -3,476 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Webdial</title>
-    <link rel="stylesheet" href="../src/output.css">
-    <style>
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .video-container video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .overlay-text {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 4rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            animation: fadeInScale 3s ease-in-out;
-        }
-        h1 {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 2rem;
-            font-weight: normal;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            width: 80%;
-            text-align: center;
-            animation: fadeInScale 4s ease-in-out;
-        }
-        @keyframes fadeInScale {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
-<<<<<<< HEAD
-    <!-- Header Section -->
-    <header class="bg-[#070707] border-white border-b-[1px] shadow-md">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <!-- Logo -->
-            <div class="text-2xl font-bold">
-                <a href="#" class="text-[#EAEAEA]">Webdial</a>
+    <section class="h-screen bg-gray-800 py-20">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+            <h2 class="text-4xl lg:text-5xl text-white font-bold mb-8">Our Website is Coming Soon</h2>
+            <p class="text-gray-400 text-lg lg:text-xl leading-relaxed mb-12">
+                Stay tuned for updates and get ready for an extraordinary experience!
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4 p-2">
+                <div class="bg-white rounded-full px-6 py-2 min-w-[120px]">
+                    <div id="days" class="font-bold text-xl text-gray-800"></div>
+                    <div class="text-xs uppercase text-gray-500">days</div>
+                </div>
+                <div class="bg-white rounded-full px-6 py-2 min-w-[120px]">
+                    <div id="hours" class="font-bold text-xl text-gray-800"></div>
+                    <div class="text-xs uppercase text-gray-500">hours</div>
+                </div>
+                <div class="bg-white rounded-full px-6 py-2 min-w-[120px]">
+                    <div id="minutes" class="font-bold text-xl text-gray-800"></div>
+                    <div class="text-xs uppercase text-gray-500">minutes</div>
+                </div>
+                <div class="bg-white rounded-full px-6 py-2 min-w-[120px]">
+                    <div id="seconds" class="font-bold text-xl text-gray-800"></div>
+                    <div class="text-xs uppercase text-gray-500">seconds</div>
+                </div>
             </div>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Home</a>
-                <a href="#" class="text-gray-300 hover:text-[#4B43E1]">About Us</a>
-                <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Services</a>
-                <a href="#" class="text-gray-300 hover:text-[#4B43E1]">Projects</a>
-            </nav>
-
-            <!-- Contact Button -->
-            <a href="#"
-               class="hidden md:inline-block bg-[#4B43E1] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
-               Contact Us
-            </a>
         </div>
-    </header>
-
-    <!-- Video Background Section -->
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="pinterestdownloader.com-1731243390.899632.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay-text">Webdial</div>
-        <h1>"Experience Excellence with Webdial."<br>A professional and confident statement that showcases your commitment to quality and exceptional service.</h1>
+    </section>
+    
+    <script>
+        // Set the date we're counting down to
+            var countDownDate = new Date("nov 13, 2024 00:00:00").getTime();
+    
+            // Update the countdown every 1 second
+            var x = setInterval(function() {
+    
+                // Get today's date and time
+                var now = new Date().getTime();
+    
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+    
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Display the result in the corresponding elements
+                document.getElementById("days").textContent = days + "d";
+                document.getElementById("hours").textContent = hours + "h";
+                document.getElementById("minutes").textContent = minutes + "m";
+                document.getElementById("seconds").textContent = seconds + "s";
+    
+    
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+    </script>
     </div>
-    <div class=" bg-[] container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
-        <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Services</h2>
-        <p class="mb-12 text-lg text-gray-500">Here is a few of the awesome Services we provide.</p>
-        <div class="w-full">
-            <div class="flex flex-col w-full mb-10 sm:flex-row">
-                <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-                    <div class="relative h-full ml-0 mr-0 sm:mr-10">
-                        <!-- Blue Color for DAPP -->
-                        <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-500 rounded-lg"></span>
-                        <div class="relative h-full p-5 bg-white border-2 border-blue-500 rounded-lg">
-                            <div class="flex items-center -mt-1">
-                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">DAPP Development</h3>
-                            </div>
-                            <p class="mt-3 mb-1 text-xs font-medium text-blue-500 uppercase">------------</p>
-                            <p class="mb-2 text-gray-600">A decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a frontend user interface.</p>
-                            <a href="#" class="block mt-4 text-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full sm:w-1/2">
-                    <div class="relative h-full ml-0 md:mr-10">
-                        <!-- Purple Color for Web 3.0 -->
-                        <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"></span>
-                        <div class="relative h-full p-5 bg-white border-2 border-purple-500 rounded-lg">
-                            <div class="flex items-center -mt-1">
-                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Web 3.0 Development</h3>
-                            </div>
-                            <p class="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">------------</p>
-                            <p class="mb-2 text-gray-600">Web 3.0 is the third generation of Internet services that will focus on understanding and analyzing data to provide a semantic web.</p>
-                            <a href="#" class="block mt-4 text-center bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600">See More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col w-full mb-5 sm:flex-row">
-                <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-                    <div class="relative h-full ml-0 mr-0 sm:mr-10">
-                        <!-- Green Color for Project Audit -->
-                        <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
-                        <div class="relative h-full p-5 bg-white border-2 border-green-500 rounded-lg">
-                            <div class="flex items-center -mt-1">
-                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Project Audit</h3>
-                            </div>
-                            <p class="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">------------</p>
-                            <p class="mb-2 text-gray-600">A Project Audit is a formal review of a project, which is intended to assess the extent up to which project management standards are being upheld.</p>
-                            <a href="#" class="block mt-4 text-center bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-                    <div class="relative h-full ml-0 mr-0 sm:mr-10">
-                        <!-- Yellow Color for Hacking/RE -->
-                        <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
-                        <div class="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
-                            <div class="flex items-center -mt-1">
-                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Hacking / RE</h3>
-                            </div>
-                            <p class="mt-3 mb-1 text-xs font-medium text-yellow-500 uppercase">------------</p>
-                            <p class="mb-2 text-gray-600">A security hacker is someone who explores methods for breaching defenses and exploiting weaknesses in a computer system or network.</p>
-                            <a href="#" class="block mt-4 text-center bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full sm:w-1/2">
-                    <div class="relative h-full ml-0 md:mr-10">
-                        <!-- Red Color for Bot/Script -->
-                        <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-red-500 rounded-lg"></span>
-                        <div class="relative h-full p-5 bg-white border-2 border-red-500 rounded-lg">
-                            <div class="flex items-center -mt-1">
-                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Bot/Script Development</h3>
-                            </div>
-                            <p class="mt-3 mb-1 text-xs font-medium text-red-500 uppercase">------------</p>
-                            <p class="mb-2 text-gray-600">Bot development frameworks were created as advanced software tools that eliminate a large amount of manual work and accelerate the development process.</p>
-                            <a href="#" class="block mt-4 text-center bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600">See More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-
-<!-- REVIEW PAGE -->
-<section id="testimonies" class="py-20 bg-slate-900">
-    <div class="max-w-6xl mx-8 md:mx-10 lg:mx-20 xl:mx-auto">
-
-
-        <div class="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100">
-            <div class="mb-12 space-y-5 md:mb-16 md:text-center">
-                <div
-                    class="inline-block px-3 py-1 text-sm font-semibold text-indigo-100 rounded-lg md:text-center text-cn bg-[#202c47] bg-opacity-60 hover:cursor-pointer hover:bg-opacity-40">
-                    Words from Others
-                </div>
-                <h1 class="mb-5 text-3xl font-semibold text-white md:text-center md:text-5xl">
-                    It's not just us.
-                </h1>
-            </div>
-        </div>
-
-
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-
-
-            <ul class="space-y-8">
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Kanye West">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Kanye West</h3>
-                                        <p class="text-gray-500 text-md">Rapper &amp; Entrepreneur</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Find God.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
-                                        <p class="text-gray-500 text-md">CEO of Apple</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
-                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
-                                    aliquam malesuada bibendum.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Kanye West">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Kanye West</h3>
-                                        <p class="text-gray-500 text-md">Rapper &amp; Entrepreneur</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Find God.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
-                                        <p class="text-gray-500 text-md">CEO of Apple</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
-                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
-                                    aliquam malesuada bibendum.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-
-
-            <ul class="hidden space-y-8 sm:block">
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/paraga" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1375285353146327052/y6jeByyD_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Parag Agrawal">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Parag Agrawal</h3>
-                                        <p class="text-gray-500 text-md">CEO of Twitter</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Enim neque volutpat ac tincidunt vitae
-                                    semper. Mattis aliquam faucibus purus in massa tempor. Neque vitae tempus quam
-                                    pellentesque nec. Turpis cursus in hac habitasse platea dictumst.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
-                                        <p class="text-gray-500 text-md">CEO of Apple</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
-                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
-                                    aliquam malesuada bibendum.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/paraga" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1375285353146327052/y6jeByyD_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Parag Agrawal">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Parag Agrawal</h3>
-                                        <p class="text-gray-500 text-md">CEO of Twitter</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Enim neque volutpat ac tincidunt vitae
-                                    semper. Mattis aliquam faucibus purus in massa tempor. Neque vitae tempus quam
-                                    pellentesque nec. Turpis cursus in hac habitasse platea dictumst.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
-                                        <p class="text-gray-500 text-md">CEO of Apple</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
-                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
-                                    aliquam malesuada bibendum.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-
-
-            <ul class="hidden space-y-8 lg:block">
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/satyanadella" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Satya Nadella">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Satya Nadella</h3>
-                                        <p class="text-gray-500 text-md">CEO of Microsoft</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Tortor dignissim convallis aenean et
-                                    tortor at. At ultrices mi tempus imperdiet nulla malesuada. Id cursus metus aliquam
-                                    eleifend mi. Quis ipsum suspendisse ultrices gravida dictum fusce ut.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/dan_schulman" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/516916920482672641/3jCeLgFb_400x400.jpeg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Dan Schulman">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Dan Schulman</h3>
-                                        <p class="text-gray-500 text-md">CEO of PayPal</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Quam pellentesque nec nam aliquam sem
-                                    et tortor consequat id. Enim sit amet venenatis urna cursus.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/satyanadella" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Satya Nadella">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Satya Nadella</h3>
-                                        <p class="text-gray-500 text-md">CEO of Microsoft</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Tortor dignissim convallis aenean et
-                                    tortor at. At ultrices mi tempus imperdiet nulla malesuada. Id cursus metus aliquam
-                                    eleifend mi. Quis ipsum suspendisse ultrices gravida dictum fusce ut.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="text-sm leading-6">
-                    <div class="relative group">
-                        <div
-                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
-                        </div><a href="https://twitter.com/dan_schulman" class="cursor-pointer">
-                            <div
-                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
-                                <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/516916920482672641/3jCeLgFb_400x400.jpeg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Dan Schulman">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-white">Dan Schulman</h3>
-                                        <p class="text-gray-500 text-md">CEO of PayPal</p>
-                                    </div>
-                                </div>
-                                <p class="leading-normal text-gray-300 text-md">Quam pellentesque nec nam aliquam sem
-                                    et tortor consequat id. Enim sit amet venenatis urna cursus.</p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-
-
-        </div>
-    </div>
-</section>
-      </div>
-     </body>
-</html>
-=======
-    <!-- //home page  -->
-    
-    
-    
 </body>
 </html>
->>>>>>> c70df87e571548f60555b94d6af582a30fc06e80
