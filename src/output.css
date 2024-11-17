@@ -8610,10 +8610,6 @@ html:has(.drawer-open.drawer-open) {
   margin-bottom: 1rem;
 }
 
-.-mt-20 {
-  margin-top: -5rem;
-}
-
 .-mt-3 {
   margin-top: -0.75rem;
 }
@@ -8692,6 +8688,10 @@ html:has(.drawer-open.drawer-open) {
 
 .mr-auto {
   margin-right: auto;
+}
+
+.ms-2 {
+  margin-inline-start: 0.5rem;
 }
 
 .mt-0 {
@@ -8869,6 +8869,10 @@ html:has(.drawer-open.drawer-open) {
   height: 0.75rem;
 }
 
+.h-3\.5 {
+  height: 0.875rem;
+}
+
 .h-3\/4 {
   height: 75%;
 }
@@ -8970,6 +8974,10 @@ html:has(.drawer-open.drawer-open) {
   width: 0.75rem;
 }
 
+.w-3\.5 {
+  width: 0.875rem;
+}
+
 .w-3\/4 {
   width: 75%;
 }
@@ -9064,6 +9072,10 @@ html:has(.drawer-open.drawer-open) {
 
 .max-w-screen-xl {
   max-width: 1280px;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .max-w-xl {
@@ -10068,6 +10080,11 @@ html:has(.drawer-open.drawer-open) {
   border-top-right-radius: 0.25rem;
 }
 
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .rounded-t-sm {
   border-top-left-radius: 0.125rem;
   border-top-right-radius: 0.125rem;
@@ -10287,6 +10304,11 @@ html:has(.drawer-open.drawer-open) {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
 .bg-blue-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
@@ -10387,6 +10409,16 @@ html:has(.drawer-open.drawer-open) {
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#010101\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 1 1 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#000000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -10613,6 +10645,10 @@ html:has(.drawer-open.drawer-open) {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -10643,6 +10679,11 @@ html:has(.drawer-open.drawer-open) {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4 {
@@ -11018,11 +11059,6 @@ html:has(.drawer-open.drawer-open) {
 .text-\[\#8f8181\] {
   --tw-text-opacity: 1;
   color: rgb(143 129 129 / var(--tw-text-opacity));
-}
-
-.text-\[\#9333EA\] {
-  --tw-text-opacity: 1;
-  color: rgb(147 51 234 / var(--tw-text-opacity));
 }
 
 .text-\[\#ea4c89\] {
@@ -11875,6 +11911,11 @@ html:has(.drawer-open.drawer-open) {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-blue-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -11990,6 +12031,11 @@ html:has(.drawer-open.drawer-open) {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-blue-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-gray-100:focus {
@@ -12114,10 +12160,6 @@ html:has(.drawer-open.drawer-open) {
     margin-top: 1.5rem;
   }
 
-  .sm\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -12196,11 +12238,6 @@ html:has(.drawer-open.drawer-open) {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .sm\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
   }
 
   .sm\:text-3xl {
@@ -12349,6 +12386,11 @@ html:has(.drawer-open.drawer-open) {
     padding-right: 2rem;
   }
 
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .md\:py-14 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
@@ -12362,11 +12404,6 @@ html:has(.drawer-open.drawer-open) {
   .md\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .md\:text-2xl {
@@ -12482,6 +12519,11 @@ html:has(.drawer-open.drawer-open) {
     padding-right: 2rem;
   }
 
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .lg\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -12490,11 +12532,6 @@ html:has(.drawer-open.drawer-open) {
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .lg\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .lg\:pt-28 {
@@ -12560,15 +12597,15 @@ html:has(.drawer-open.drawer-open) {
     line-height: 2.5rem;
   }
 
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
   }
+}
+
+.rtl\:rotate-180:where([dir="rtl"], [dir="rtl"] *) {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12597,6 +12634,11 @@ html:has(.drawer-open.drawer-open) {
   .dark\:border-gray-800 {
     --tw-border-opacity: 1;
     border-color: rgb(31 41 55 / var(--tw-border-opacity));
+  }
+
+  .dark\:bg-blue-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity));
   }
 
   .dark\:bg-gray-700 {
@@ -12669,6 +12711,11 @@ html:has(.drawer-open.drawer-open) {
     background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
 
+  .dark\:hover\:bg-blue-700:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  }
+
   .dark\:hover\:bg-gray-700:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -12677,6 +12724,11 @@ html:has(.drawer-open.drawer-open) {
   .dark\:hover\:text-white:hover {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:focus\:ring-blue-800:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity));
   }
 
   .dark\:focus\:ring-gray-700:focus {
