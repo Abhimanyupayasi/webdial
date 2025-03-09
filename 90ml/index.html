@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <style>
+        @keyframes scroll {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+      
+        .slide-track {
+          display: flex;
+          animation: scroll 5s linear infinite;
+          width: max-content;
+        }
+      </style>
+</head>
+<body  class="bg-white/20" >
+
+    <!-- Header -->
+    <!-- bg-[url('https://images.pexels.com/photos/2702805/pexels-photo-2702805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] -->
+    <div class="bg-gray-900 flex flex-col items-center justify-center n">
+        <header id="glass-header" class="sticky top-4 z-40  transform -translate-x-1/2 w-[80%] max-w-5xl bg-white/20 backdrop-blur-md shadow-lg rounded-full flex items-center justify-between px-6 py-2 border border-white/30 opacity-0 translate-y-[-20px]">
+            <!-- Left - Logo -->
+            <div class="flex items-center space-x-3">
+                <!-- Logo -->
+                <img src="../imgs/ad/90mlbar.jpg" class="w-12 h-12 rounded-full shadow-lg border-2 border-white/50" alt="logo">
+                
+                <!-- Text with Style -->
+                <span class="text-white text-xl font-[cursive] font-bold bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+                    90ml Bar
+                </span>
+            </div>
+            
+            
+            <!-- Right - CTA Button -->
+            <button id="cta-btn" class="text-white bg-gradient-to-r from-purple-500 to-yellow-400 px-4 py-3 rounded-full shadow-md transition transform duration-300 hover:scale-110 active:scale-95">
+                Get Started for Free
+            </button>
+        </header>
+
+        <div class="h-10"></div>
+        <div class="w-[80%] max-w-5xl mx-auto text-center bg-gradient-to-r from-yellow-400 to-red-500 text-white py-8 rounded-2xl shadow-lg">
+            <h2 class="text-3xl px-4 font-extrabold">Welcome to 90ML Bar & Restaurant!</h2>
+            <p class="text-lg mt-2">Indulge in a wide variety of food and drinks. <br> We offer the finest selection of items that will make your experience unforgettable!</p>
+        
+            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="text-lg">🍕 Pizza</div>
+                <div class="text-lg">🍔 Burgers</div>
+                <div class="text-lg">🍻 Beer</div>
+                <div class="text-lg">🥃 Rum</div>
+                <div class="text-lg">🥃 Whiskey</div>
+                <div class="text-lg">🍣 Sushi</div>
+                <div class="text-lg">🍲 Dosa</div>
+                <div class="text-lg">🍜 Noodles</div>
+                <div class="text-lg">🍟 Fries</div>
+                <div class="text-lg">🍷 Wine</div>
+            </div>
+        
+            <p class="text-sm text-gray-200 mt-4">Join us for a great time, great food, and drinks at 90ML Bar & Restaurant.</p>
+        </div>
+        
+
+        <div class="w-[80%]  max-w-5xl mx-auto p-4">
+            <!-- Section Heading -->
+            <h2 class="text-2xl font-bold text-center text-white font-[cursive] mb-3">
+                Find Us Here 📍
+            </h2>
+        
+            <!-- Map Container with Glass Effect -->
+            <div class="bg-white/10 z-20 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden p-3">
+                <iframe class="w-full h-[300px] rounded-lg" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.2379697578835!2d80.38077707397353!3d23.845682085114408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3983df00503b616d%3A0xdf9d6d48cdd63ab9!2s90%20ml%20bar%20%26%20restaurant!5e0!3m2!1sen!2sin!4v1741510668674!5m2!1sen!2sin" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="w-[80%] max-w-5xl rounded-lg mx-auto overflow-hidden relative">
+            <div class="slider flex w-max">
+                <!-- Duplicate Images for Seamless Loop -->
+                <div class="slide-track flex">
+                    <img src="https://images.unsplash.com/photo-1516600164266-f3b8166ae679?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 1">
+                    <img src="https://images.pexels.com/photos/2702805/pexels-photo-2702805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 2">
+                    <img src="https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 3">
+                    <img src="https://images.pexels.com/photos/1850595/pexels-photo-1850595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 4">
+                    <img src="https://images.pexels.com/photos/8775181/pexels-photo-8775181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 5">
+                    <img src="https://images.pexels.com/photos/6390957/pexels-photo-6390957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 6">
+                    <img src="https://images.pexels.com/photos/6390957/pexels-photo-6390957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 7">
+                    <img src="https://images.pexels.com/photos/8775176/pexels-photo-8775176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 8">
+                    <img src="https://images.pexels.com/photos/16547178/pexels-photo-16547178/free-photo-of-sommelier-pouring-wine-in-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 9">
+                    <img src="https://images.pexels.com/photos/2537608/pexels-photo-2537608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 10">
+        
+                    <!-- Duplicated Images for Smooth Loop -->
+                    <img src="https://images.unsplash.com/photo-1516600164266-f3b8166ae679?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 1">
+                    <img src="https://images.pexels.com/photos/2702805/pexels-photo-2702805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 2">
+                    <img src="https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 3">
+                    <img src="https://images.pexels.com/photos/1850595/pexels-photo-1850595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 4">
+                    <img src="https://images.pexels.com/photos/8775181/pexels-photo-8775181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 5">
+                    <img src="https://images.pexels.com/photos/6390957/pexels-photo-6390957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 6">
+                    <img src="https://images.pexels.com/photos/6390957/pexels-photo-6390957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 7">
+                    <img src="https://images.pexels.com/photos/8775176/pexels-photo-8775176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 8">
+                    <img src="https://images.pexels.com/photos/16547178/pexels-photo-16547178/free-photo-of-sommelier-pouring-wine-in-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 9">
+                    <img src="https://images.pexels.com/photos/2537608/pexels-photo-2537608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="h-[100px] w-[200px] rounded-lg object-cover" alt="Image 10">
+                </div>
+            </div>
+        </div>
+        <div class="py-10">
+            <div class=" mx-auto text-center mt-10">
+                <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-yellow-400">🔥 Holi Offer! Just ₹5/day</h2>
+                    <p class="text-lg md:text-xl text-white mt-2">Make your own business website at just ₹5/day.</p>
+                    <p class="text-sm md:text-base text-gray-300 mt-1">Website | Video Editing | Business Growth</p>
+                    
+                    <a href="https://web.webdial.in/marketplace" target="_blank" class="mt-4 inline-block px-6 py-2 bg-gradient-to-r from-yellow-400 to-red-500 text-white font-bold rounded-lg shadow-md hover:scale-105 transition-transform">
+                        See All Plans
+                    </a>
+                    
+                    <p class="text-xs text-gray-400 mt-4">© All rights reserved | Powered by <a href="https://webdial.in" class="underline text-yellow-300">WebDial.in</a></p>
+                </div>
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+
+    
+
+    <script>
+        // Fade-in animation for header
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.getElementById("glass-header");
+            setTimeout(() => {
+                header.style.opacity = "1";
+                header.style.transform = "translateY(0)";
+            }, 200);
+        });
+    </script>
+
+</body>
+</html>
