@@ -43,6 +43,40 @@
 </head>
 <body  class="bg-white/20" >
 
+    <!-- Popup Container -->
+<!-- Popup Container -->
+<div id="holi-offer-popup" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center w-[80%] md:w-[50%] relative">
+        <h2 class="text-2xl font-bold text-red-500">🎉 Happy Holi Offer! 🎉</h2>
+        <p class="text-lg text-gray-700 mt-2">
+            Build your <span class="font-bold text-yellow-500">Personal / Business</span> website in just <span class="text-red-500 font-bold">₹5/day</span>.
+        </p>
+        <p class="text-sm text-gray-600 mt-1">Video Editing | Graphic Designing | Ads | Websites</p>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center gap-6 mt-4">
+            <!-- WhatsApp Icon -->
+            <a href="https://wa.me/7049548385?text=I%20want%20Business%2FPersonal%20Website" target="_blank" class="animate-bounce">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-10 h-10">
+            </a>
+            <!-- Website Icon -->
+            <a href="https://web.webdial.in/marketplace" target="_blank" class="animate-bounce">
+                <img src="../imgs/ad/web.png" alt="Website" class="w-8 h-8">
+            </a>
+        </div>
+
+        <!-- Close Button -->
+        <button id="close-popup" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+            Close
+        </button>
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+
+
+
     <!-- Header -->
     <!-- bg-[url('https://images.pexels.com/photos/2702805/pexels-photo-2702805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] -->
     <div class="bg-gray-900 flex flex-col items-center justify-center n">
@@ -155,6 +189,15 @@
     
 
     <script>
+         document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("holi-offer-popup");
+        const closeButton = document.getElementById("close-popup");
+
+        // Close button event
+        closeButton.addEventListener("click", function () {
+            popup.classList.add("hidden"); // Hide popup
+        });
+    });
         // Fade-in animation for header
         document.addEventListener("DOMContentLoaded", () => {
             const header = document.getElementById("glass-header");
